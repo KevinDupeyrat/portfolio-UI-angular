@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+
+//We import our custom scss component here
+
+@include mat-core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-primary-theme: (
+  50 : #ffefeb,
+  100 : #fed7cd,
+  200 : #fdbdab,
+  300 : #fca389,
+  400 : #fc8f70,
+  500 : #fb7b57,
+  600 : #fa734f,
+  700 : #fa6846,
+  800 : #f95e3c,
+  900 : #f84b2c,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffd7d1,
+  A700 : #ffc1b8,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$theme-primary: mat-palette($md-primary-theme);
+$theme-accent:  mat-palette($mat-deep-orange, A200, A100, A400);
+$theme-warn:    mat-palette($mat-red);
+$theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
+//
+@include angular-material-theme($theme);
+
+.light {
+  $light-primary: mat-palette($md-primary-theme, 200,300, 900);
+  $light-accent:  mat-palette($mat-light-blue, 600, 100, 800);
+  $light-warn:    mat-palette($mat-red, 600);
+  $light-theme: mat-dark-theme($light-primary, $light-accent, $light-warn);
+  @include angular-material-theme($light-theme);
+
+}

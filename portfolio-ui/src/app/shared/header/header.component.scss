@@ -1,0 +1,36 @@
+mat-icon {
+    transition-property: color;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+}
+
+.menuButton:hover {
+    background-color: white;
+    color: #fa6039;
+    transition-property: color;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+}
+
+mat-toolbar {
+    height: 5rem;
+}
+
+img {
+    margin-left: 0.5rem;
+}
+
+mat-slide-toggle {
+    font-size: 0.7rem;
+}
+
+.title {
+    margin: auto;
+}
+
+.right-icons {
+    float: right;
+    margin-left: -5rem;
+}
