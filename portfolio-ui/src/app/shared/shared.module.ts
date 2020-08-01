@@ -1,11 +1,13 @@
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { NgModule } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MailDialogComponent } from './mail-dialog/mail-dialog.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -16,11 +18,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
         MatIconModule,
         MatMenuModule,
         MatButtonModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        CommonModule
     ],
     declarations: [
         HeaderComponent,
-        MenuComponent
+        MenuComponent,
+        MailDialogComponent
     ],
     exports: [
         HeaderComponent,

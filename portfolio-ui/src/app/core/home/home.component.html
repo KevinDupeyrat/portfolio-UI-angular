@@ -1,3 +1,30 @@
 <div class="body-component">
     
+    <mat-carousel
+        timings="250ms ease-in"
+        [autoplay]="true"
+        interval="4000"
+        color="accent"
+        maxWidth="auto"
+        proportion="45"
+        slides="5"
+        [loop]="true"
+        [hideArrows]="false"
+        [hideIndicators]="false"
+        [useKeyboard]="false"
+        [useMouseWheel]="false"
+        orientation="ltr">
+            <mat-carousel-slide
+                #matCarouselSlide
+                *ngFor="let slide of slides"
+                [image]="slide.image"
+                overlayColor="#00000040"
+                [hideOverlay]="false">
+            </mat-carousel-slide>
+    </mat-carousel>
+
+    <div class="home-text">
+        Développeur d'application Full-Stack Freelance
+    </div>
+
 </div>

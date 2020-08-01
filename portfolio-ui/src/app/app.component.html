@@ -1,12 +1,44 @@
-<mat-sidenav-container class="example-container" (backdropClick)="close()">
-    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
-        <app-menu></app-menu>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <app-header></app-header>
-        <router-outlet></router-outlet>
-        <button mat-mini-fab color="primary">
-            <mat-icon>mail_outline</mat-icon>
-          </button>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="app-toolbar">
+    <app-header></app-header>
+</div>
+<div #home>
+    <app-home></app-home>
+</div>
+<div class="about">
+    <div #apropos>
+        <app-about></app-about>
+    </div>
+    <div #service>
+        <app-services></app-services>
+    </div>
+    <div #portfolio>
+        <mat-card class="card-about">
+ 
+            <mat-card-content>
+        
+                <mat-grid-list cols="2" rowHeight="1:1">
+        
+                    <mat-grid-tile>
+                        bla bla bla bla bla
+                        <br/>
+                        bla bla bla bla bla
+                        bla
+        
+                        blablabla
+                    </mat-grid-tile>
+                    
+                    <mat-grid-tile>
+                        bla bla bla bla bla bla
+                    </mat-grid-tile>
+        
+        
+                </mat-grid-list>
+        
+            </mat-card-content>
+        
+        </mat-card>
+    </div>
+</div>
+<button mat-mini-fab color="accent" (click)="openDialog()">
+    <mat-icon>mail_outline</mat-icon>
+</button>

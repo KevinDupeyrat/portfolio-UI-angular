@@ -1,3 +1,26 @@
 .side-bar-menu {
     height: 100vh;
 }
+
+.menu {
+    text-align: center;
+    float: right;
+    font-size: 0.7rem;
+    margin-right: 3rem;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active, .active {
+    color: #3ca2c5;
+}
+
+
+

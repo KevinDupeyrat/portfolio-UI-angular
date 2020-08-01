@@ -1,0 +1,21 @@
+.section-progress {
+    width: 50rem;
+    text-transform: none;
+    text-align: left;
+}
+
+.card-about {
+    background-color: #4F4F4F;
+}
+
+mat-grid-tile {
+    text-transform: none;
+    text-align: left;
+    justify-content: flex-start !important ;
+    align-items: flex-start !important;
+}
+
+.mat-grid-tile .mat-figure {
+    justify-content: flex-start;
+    align-items: flex-start;
+ }

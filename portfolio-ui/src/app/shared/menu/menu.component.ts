@@ -1,5 +1,5 @@
-import { MenuShowEventService } from './../../service/menu-show-event.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { MenuActiveService } from './../../service/menu-active.service';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -9,9 +9,18 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private menuShowEventService: MenuShowEventService) { }
+  currentActive;
+
+  constructor(private menuActiveService: MenuActiveService) { }
 
   ngOnInit(): void {
+    this.menuActiveService.getShowMenuActiveEventStatus().subscribe( value => {
+      this.currentActive = value;
+    });
+  }
+
+  scrollToElement(element: any): void {
+    
   }
 
 }

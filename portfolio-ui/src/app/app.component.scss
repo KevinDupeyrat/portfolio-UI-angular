@@ -7,3 +7,14 @@ button {
     width: 4rem;
     height: 4rem;
 }
+
+.about {
+    margin-top: 18rem;
+}
+
+.app-toolbar {
+    position: fixed;
+    width: 100%;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}

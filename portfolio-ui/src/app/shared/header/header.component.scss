@@ -27,10 +27,17 @@ mat-slide-toggle {
 }
 
 .title {
-    margin: auto;
+    float: left !important;
 }
 
 .right-icons {
+    width: 100%;
+}
+
+button {
     float: right;
-    margin-left: -5rem;
+}
+
+.menu {
+    width: 100%;
 }

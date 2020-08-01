@@ -1,3 +1,14 @@
-<div class="side-bar-menu">
-    <p>Here, future menu !!</p>
+<div class="right-icons">
+    <span class="menu">
+        <a [ngClass]="{'active': currentActive === 4}" (click)="scrollToElement(4)">PORTFOLIO</a>
+    </span>
+    <span class="menu">
+        <a [ngClass]="{'active': currentActive === 3}" (click)="scrollToElement(3)">SERVICES</a>
+    </span>
+    <span class="menu">
+        <a [ngClass]="{'active': currentActive === 2}" (click)="scrollToElement(2)">A PROPOS</a>
+    </span>
+    <span class="menu">
+        <a [ngClass]="{'active': currentActive === 1}" (click)="scrollToElement(1)">ACCUEIL</a>
+    </span>
 </div>

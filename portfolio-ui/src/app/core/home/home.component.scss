@@ -1,6 +1,24 @@
 .body-component {
-    background-color: #FCFCFC;
+    background-color: #6F6E6E;
     text-align: center;
     color: #3B3B3B;
-    height: 100vh;
+}
+
+.home-text {
+    animation: pulse 3s;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    margin-top: -20rem;
+}
+
+@keyframes pulse {
+    0% {
+        margin-top: -30rem;
+        opacity: 0;
+    }
+    100% {
+        margin-top: -20rem;
+        opacity: 1;
+    }
 }

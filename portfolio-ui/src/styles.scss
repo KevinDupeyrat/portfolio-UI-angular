@@ -11,51 +11,117 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @include mat-core();
 
 /* For use in src/lib/core/theming/_palette.scss */
-$md-primary-theme: (
-  50 : #ffefeb,
-  100 : #fed7cd,
-  200 : #fdbdab,
-  300 : #fca389,
-  400 : #fc8f70,
-  500 : #fb7b57,
-  600 : #fa734f,
-  700 : #fa6846,
-  800 : #f95e3c,
-  900 : #f84b2c,
-  A100 : #ffffff,
-  A200 : #ffffff,
-  A400 : #ffd7d1,
-  A700 : #ffc1b8,
+$md-accent-theme: (
+  50 : #e4f2f7,
+    100 : #badeeb,
+    200 : #8dc8dd,
+    300 : #5fb2cf,
+    400 : #3ca2c5,
+    500 : #1a91bb,
+    600 : #1789b5,
+    700 : #137eac,
+    800 : #0f74a4,
+    900 : #086296,
+    A100 : #c3e6ff,
+    A200 : #90d2ff,
+    A400 : #5dbdff,
+    A700 : #43b2ff,
     contrast: (
-        50 : #ffffff,
-        100 : #ffffff,
-        200 : #ffffff,
-        300 : #ffffff,
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-primary-theme: (
+  50 : #eaeaea,
+    100 : #cacaca,
+    200 : #a6a6a6,
+    300 : #828282,
+    400 : #686868,
+    500 : #4d4d4d,
+    600 : #464646,
+    700 : #3d3d3d,
+    800 : #343434,
+    900 : #252525,
+    A100 : #f18282,
+    A200 : #ec5454,
+    A400 : #ff0e0e,
+    A700 : #f30000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
         400 : #ffffff,
         500 : #ffffff,
         600 : #ffffff,
-        700 : #000000,
-        800 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
         900 : #ffffff,
-        A100 : #ffffff,
-        A200 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
         A400 : #ffffff,
         A700 : #ffffff,
     )
 );
 
+$md-warn-theme: (
+  50 : #fdf8e6,
+    100 : #fbedc2,
+    200 : #f8e199,
+    300 : #f5d470,
+    400 : #f3cb51,
+    500 : #f1c232,
+    600 : #efbc2d,
+    700 : #edb426,
+    800 : #ebac1f,
+    900 : #e79f13,
+    A100 : #ffffff,
+    A200 : #fff4e2,
+    A400 : #ffe2af,
+    A700 : #ffd896,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 
 $theme-primary: mat-palette($md-primary-theme);
-$theme-accent:  mat-palette($mat-deep-orange, A200, A100, A400);
-$theme-warn:    mat-palette($mat-red);
+$theme-accent:  mat-palette($md-accent-theme);
+$theme-warn:    mat-palette($md-warn-theme);
 $theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 //
 @include angular-material-theme($theme);
 
 .light {
   $light-primary: mat-palette($md-primary-theme, 200,300, 900);
-  $light-accent:  mat-palette($mat-light-blue, 600, 100, 800);
-  $light-warn:    mat-palette($mat-red, 600);
+  $light-accent:  mat-palette($md-accent-theme, 600, 100, 800);
+  $light-warn:    mat-palette($md-warn-theme, 600);
   $light-theme: mat-dark-theme($light-primary, $light-accent, $light-warn);
   @include angular-material-theme($light-theme);
 
