@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CoreModule,
     MatSidenavModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

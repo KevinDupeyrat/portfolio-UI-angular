@@ -1,31 +1,22 @@
 <mat-card class="card-about">
+    <div class="row">
 
-    <mat-card-content>
+        <div class=col-sm>
+            bla bla bla bla bla
+            <br />
+            bla bla bla bla bla
+            bla
 
-        <mat-grid-list cols="2" rowHeight="1:1">
+            blablabla
+        </div>
 
-            <mat-grid-tile>
-                bla bla bla bla bla
-                <br/>
-                bla bla bla bla bla
-                bla
+        <div class=col-sm>
+            <div class="row" *ngFor="let skill of skills">
+                {{skill.name}} - {{skill.value}}%
+                <mat-progress-bar mode="determinate" color="accent" [value]="skill.value">
+                </mat-progress-bar>
+            </div>
+        </div>
 
-                blablabla
-            </mat-grid-tile>
-            
-            <mat-grid-tile>
-                <div class="section-progress" *ngFor="let skill of skills">
-                    {{skill.name}} - {{skill.value}}%
-                    <mat-progress-bar mode="determinate" color="accent" [value]="skill.value">
-                    </mat-progress-bar>
-                    <br/>
-                </div>
-                <br/>
-            </mat-grid-tile>
-
-
-        </mat-grid-list>
-
-    </mat-card-content>
-
+    </div>
 </mat-card>
