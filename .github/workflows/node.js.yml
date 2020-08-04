@@ -1,6 +1,3 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Publish Angular on Docker Image to GitHub Packages
 on:
   release:
@@ -17,18 +14,17 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
     - name: install dependencies
-    - run: npm install
+      run: npm install
     - name: build project
-    - run: ng build --prod
+      run: ng build --prod
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v1
       with:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
-        repository: kevindupeyrat/portfolio-ui/portfolio-server-docker-image
+        repository: kevindupeyrat/portfolio-ui/portfolio-ui-docker-image
         dockerfile: portfolio-ui/Dockerfile
         path: portfolio-ui
         tag_with_ref: true
