@@ -1,16 +1,18 @@
 <mat-card class="card-about">
     <div class="row">
 
-        <div class=col-sm>
-            bla bla bla bla bla
-            <br />
-            bla bla bla bla bla
-            bla
-
-            blablabla
+        <div class="col-sm col-md col-lg">
+            Développeur d'application Web pour de grands comptes de la finance.
+            Utilisation de l'ecosystème Java et du framework Spring pour la partie Back-end,
+            et l'écosystème Angular et TypeScript pour la partie Front-end.
+            
+            Intégration continue a partir d'un repository GitHub jusqu'a déploiement sur les serveurs
+            AWS.
+            Conteneurisation avec Docker et Docker-Compose.
+            <button type="button" class="btn btn-secondary btn-lg button-web-detail" (click)="openDialog()">En savoir plus sur ce site</button>
         </div>
 
-        <div class=col-sm>
+        <div class="col-sm col-md col-lg">
             <div class="row" *ngFor="let skill of skills">
                 {{skill.name}} - {{skill.value}}%
                 <mat-progress-bar mode="determinate" color="accent" [value]="skill.value">

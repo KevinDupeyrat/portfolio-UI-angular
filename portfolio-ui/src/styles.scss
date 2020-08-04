@@ -128,3 +128,12 @@ $theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.mat-step-header .mat-step-icon-selected {
+    background-color: #3ca2c5 !important;
+}
+
+button:focus{
+  border: none !important;
+  outline: none !important;
+}

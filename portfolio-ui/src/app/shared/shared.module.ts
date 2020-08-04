@@ -8,6 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MailDialogComponent } from './mail-dialog/mail-dialog.component';
 import { CommonModule } from '@angular/common';
+import { WebDetailPopupComponent } from './web-detail-popup/web-detail-popup.component';
+import { MatStepperModule } from '@angular/material/stepper';
+
 
 
 
@@ -19,12 +22,14 @@ import { CommonModule } from '@angular/common';
         MatMenuModule,
         MatButtonModule,
         MatSlideToggleModule,
-        CommonModule
+        CommonModule,
+        MatStepperModule
     ],
     declarations: [
         HeaderComponent,
         MenuComponent,
-        MailDialogComponent
+        MailDialogComponent,
+        WebDetailPopupComponent
     ],
     exports: [
         HeaderComponent,

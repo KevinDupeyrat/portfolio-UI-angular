@@ -30,11 +30,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   currentActive = 1;
 
-  constructor(
-    public dialog: MatDialog,
-    private menuActiveService: MenuActiveService
-  ) {
-
+  constructor(private dialog: MatDialog,
+              private menuActiveService: MenuActiveService) {
   }
 
 
