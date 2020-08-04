@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ import { MailDialogComponent } from './mail-dialog/mail-dialog.component';
 import { CommonModule } from '@angular/common';
 import { WebDetailPopupComponent } from './web-detail-popup/web-detail-popup.component';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { FooterComponent } from './footer/footer.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -23,20 +25,26 @@ import { MatStepperModule } from '@angular/material/stepper';
         MatButtonModule,
         MatSlideToggleModule,
         CommonModule,
-        MatStepperModule
+        MatStepperModule,
+        MatCardModule,
+        MatGridListModule
     ],
     declarations: [
         HeaderComponent,
         MenuComponent,
         MailDialogComponent,
-        WebDetailPopupComponent
+        WebDetailPopupComponent,
+        FooterComponent
     ],
     exports: [
         HeaderComponent,
         MenuComponent,
+        FooterComponent,
         MatToolbarModule,
         MatIconModule,
-        MatMenuModule
+        MatMenuModule,
+        MatCardModule,
+        MatGridListModule
     ],
     entryComponents: []
 

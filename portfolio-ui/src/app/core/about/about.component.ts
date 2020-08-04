@@ -22,8 +22,8 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(WebDetailPopupComponent, {
-      width: '60rem',
-      height: '30rem',
+      width: '90rem',
+      height: '40rem',
       backdropClass: 'backdropBackground'
     });
   }

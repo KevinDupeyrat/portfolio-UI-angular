@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 
