@@ -12,7 +12,11 @@ import { CommonModule } from '@angular/common';
 import { WebDetailPopupComponent } from './web-detail-popup/web-detail-popup.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { FooterComponent } from './footer/footer.component';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -27,7 +31,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
         CommonModule,
         MatStepperModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule
     ],
     declarations: [
         HeaderComponent,
@@ -44,7 +51,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
         MatIconModule,
         MatMenuModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule
     ],
     entryComponents: []
 

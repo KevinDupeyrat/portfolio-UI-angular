@@ -1,49 +1,137 @@
 <mat-horizontal-stepper linear #stepper>
     <mat-step>
-        <img src="assets/images/icons/java.png">
-
-        blablabla blablabla
-        <div class="step-button">
-            <button mat-button matStepperNext>Next</button>
-        </div>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="img-java"></div>
+                <mat-card-title>Java</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    L'application côté Serveur tourne sur les outils du langage de programmation 
+                    Orienté Objet Java.
+                </p>
+                <p>
+                    La version utilisée est Java 11 avec le JDK d'Amazone Correto. 
+                </p>
+                <p>
+                     <a href="https://github.com/KevinDupeyrat/portfolio-SERVER">Lien vers le Github du serveur</a>
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="step-button">
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
     </mat-step>
 
     <mat-step>
-        <img class="img-spring"  src="assets/images/icons/spring.png">
-
-        blablabla blablabla
-        <div class="step-button">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-        </div>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="img-spring"></div>
+                <mat-card-title>Spring Framework</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Toujours côté serveur, l'application est construite avec le Framework Spring.
+                </p>
+                <p>
+                    Spring Core pour l'utilisation du contexte applicatif Spring, 
+                    Spring MVC pour la partie API,
+                    Spring Batch pour l'utilisation de batch dans les versions prochaines de l'application.
+                    Spring Data pour la liaison avec la Base de données (ici MongoDB).
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="step-button">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
     </mat-step>
 
     <mat-step>
-        <img class="img-angular" src="assets/images/icons/angular.png">
-
-        blablabla blablabla
-        <div class="step-button">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-        </div>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="img-angular"></div>
+                <mat-card-title>Angular</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Pour la partie Front, l'application est développée avec le Framework
+                    Angular.
+                </p>
+                <p>
+                    La version 10 du Framework de Google est utilisé, 
+                    elle consomme les API du Serveur Java notamment pour la partie envoie de mail.
+                    L'application est divisée en different module :
+                        - Core : pour la partie principale des différents chapitres de la page
+                        - Shared : pour le bandeau, le menu, le footer et les différantes pop-up
+                        - Service : pour les services de l'application (Appels API, Observable ...)
+                        - Model : pour les Class Model de l'application
+                </p>
+                <p>
+                    <a href="https://github.com/KevinDupeyrat/portfolio-UI">Lien vers le Github de la partie Front</a>
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="step-button">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
     </mat-step>
 
     <mat-step>
-        <img class="img-docker" src="assets/images/icons/docker.jpg">
-
-        blablabla blablabla
-        <div class="step-button">
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-        </div>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="img-docker"></div>
+                <mat-card-title>Docker</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Docker est utilisé pour la conteneurisation de l'application.
+                </p>
+                <p>
+                    Nous aurons trois conteneurs, un pour le serveur Java, un pour la base de 
+                    données MongoDB et un pour la Front Angular.
+                    Docker Compose est utilisé pour créer le lien entre les trois conteneurs et pour
+                    l'orchestration de ceux-ci.
+                </p>
+                <p>
+                    Les images Docker sont construites et hébergées sur le Github des différentes parties
+                    de l'application avec <b>GitHub Actions</b>.
+                    L'application comprenant le serveur, le front et la base de données peuvent être
+                    hébergés sur le même serveur physique ou virtule.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="step-button">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
     </mat-step>
 
-    <mat-step>
-        <img class="img-aws" src="assets/images/icons/aws.jpg">
-
-        blablabla blablabla
-        <div class="step-button">
-            <button mat-button matStepperPrevious>Back</button>
-        </div>
+    <mat-step>∑
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="img-aws"></div>
+                <mat-card-title>AWS</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Blablabla blabla
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="step-button">
+                    <button mat-button matStepperPrevious>Back</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
     </mat-step>
 </mat-horizontal-stepper>

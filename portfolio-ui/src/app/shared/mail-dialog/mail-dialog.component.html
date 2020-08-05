@@ -1,3 +1,44 @@
-<div class="body-mail-dialog">
-    Here, future Dialogue for Mailing !
+<div *ngIf="formGroup">
+    <div class="email-form" [formGroup]="formGroup">
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label color="accent">Email</mat-label>
+                <input matInput placeholder="Ex: eric.dupont@gmail.com" formControlName="email"
+                    [errorStateMatcher]="matcher">
+                <mat-error
+                    *ngIf="formGroup.get('email').hasError('email') && !formGroup.get('email').hasError('required')">
+                    Merci de saisire une adresse email valide
+                </mat-error>
+                <mat-error *ngIf="formGroup.get('email').hasError('required')">
+                    L'email est <strong>obligatoire</strong>
+                </mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+
+            <mat-form-field appearance="standard">
+                <mat-label color="accent">Nom</mat-label>
+                <input matInput formControlName="name">
+                <mat-error *ngIf="formGroup.get('name').hasError('required')">
+                    Le nom est <strong>obligatoire</strong>
+                </mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+
+            <mat-form-field appearance="standard" style="width: 30rem !important">
+                <mat-label color="accent">Votre message</mat-label>
+                <textarea matInput rows="10" cols="70" formControlName="message"></textarea>
+                <mat-error *ngIf="formGroup.get('message').hasError('required')">
+                    Le message est <strong>obligatoire</strong>
+                </mat-error>
+            </mat-form-field>
+
+        </p>
+
+        <div>
+            <button type="submit" mat-raised-button color="accent" [disabled]="!formGroup.valid"
+                (click)="submitMessage()">Envoyer</button>
+        </div>
+    </div>
 </div>

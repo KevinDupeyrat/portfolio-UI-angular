@@ -1,0 +1,5 @@
+{
+    "about": {
+        "text": "Développeur d'application Web pour de grands comptes de la finance. Utilisation de l'ecosystème Java et du framework Spring pour la partie Back-end, et l'écosystème Angular et TypeScript pour la partie Front-end. Intégration continue a partir d'un repository GitHub jusqu'a déploiement sur les serveurs AWS. Conteneurisation avec Docker et Docker-Compose."
+    }
+}

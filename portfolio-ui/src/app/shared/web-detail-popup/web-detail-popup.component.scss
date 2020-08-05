@@ -6,9 +6,50 @@ button {
 }
 
 .step-button {
-    float: right;
+    align-items: auto;
 }
 
-.img-spring, .img-angular, .img-docker, .img-aws {
-    width: 10rem !important;
+.img-java {
+    background-image: url('../../../assets/images/icons/java.png');
+    background-size: cover;
+}
+
+.img-spring {
+    background-image: url('../../../assets/images/icons/spring.png');
+    background-size: cover;
+}
+
+.img-angular {
+    background-image: url('../../../assets/images/icons/angular.png');
+    background-size: cover;
+}
+
+.img-docker {
+    background-image: url('../../../assets/images/icons/docker.jpg');
+    background-size: cover;
+}
+
+.img-aws {
+    background-image: url('../../../assets/images/icons/aws.jpg');
+    background-size: cover;
+}
+
+mat-card {
+    background-color: #686868 !important;
+}
+
+mat-card-content  {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    padding: 2rem;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover, a:active, .active {
+    color: #3ca2c5;
 }

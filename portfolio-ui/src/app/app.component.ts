@@ -20,13 +20,13 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('home', { static: true }) homeElement: ElementRef;
   @ViewChild('apropos', { static: true }) aproposElement: ElementRef;
   @ViewChild('service', { static: true }) serviceElement: ElementRef;
-  @ViewChild('portfolio', { static: true }) portfolioElement: ElementRef;
+  @ViewChild('experience', { static: true }) experienceElement: ElementRef;
 
 
   homeOffset = null;
   aproposOffset = null;
   serviceOffset = null;
-  portfolioOffset = null;
+  experienceOffset = null;
 
   currentActive = 1;
 
@@ -41,13 +41,13 @@ export class AppComponent implements OnInit, OnDestroy {
       this.homeElement,
       this.aproposElement,
       this.serviceElement,
-      this.portfolioElement
+      this.experienceElement
     ];
 
     this.homeOffset = this.homeElement.nativeElement.offsetTop;
     this.aproposOffset = this.homeOffset + 400;
     this.serviceOffset = this.aproposOffset + 600;
-    this.portfolioOffset = this.serviceOffset + 600;
+    this.experienceOffset = this.serviceOffset + 600;
 
     this.subscription.push(this.menuActiveService.getScrollIntoView().subscribe(value => {
       if (value === 0) {
@@ -65,9 +65,9 @@ export class AppComponent implements OnInit, OnDestroy {
       this.menuActiveService.setShowMenuActiveEventStatus(1);
     } else if (yOffset >= this.aproposOffset && yOffset < this.serviceOffset) {
       this.menuActiveService.setShowMenuActiveEventStatus(2);
-    } else if (yOffset >= this.serviceOffset && yOffset < this.portfolioOffset) {
+    } else if (yOffset >= this.serviceOffset && yOffset < this.experienceOffset) {
       this.menuActiveService.setShowMenuActiveEventStatus(3);
-    } else if (yOffset >= this.portfolioOffset) {
+    } else if (yOffset >= this.experienceOffset) {
       this.menuActiveService.setShowMenuActiveEventStatus(4);
     }
   }
