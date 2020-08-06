@@ -1,6 +1,9 @@
+import { EmailService } from './../../service/rest/email.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -13,7 +16,9 @@ export class MailDialogComponent implements OnInit {
   formGroup: FormGroup;
   matcher = new MyErrorStateMatcher();
 
-  constructor() { }
+  constructor(private emailService: EmailService,
+    private dialogRef: MatDialogRef<MailDialogComponent>,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
 
@@ -25,7 +30,23 @@ export class MailDialogComponent implements OnInit {
   }
 
   submitMessage(): void {
-    console.log(this.formGroup.value);
+    this.emailService.postEmail(this.formGroup.value).subscribe(callback => {
+      this.snackBar.open('Email envoyé avec succès', 'Email', {
+        duration: 2000
+      });
+    },
+      (error) => {
+        if (error.status === 200) {
+          this.snackBar.open('Email envoyé avec succès', 'Email', {
+            duration: 2000
+          });
+        } else {
+          this.snackBar.open('Sending email fail !', 'Email', {
+            duration: 2000
+          });
+        }
+      });
+    this.dialogRef.close();
   }
 
 }
