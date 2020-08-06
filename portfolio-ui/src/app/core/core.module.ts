@@ -28,7 +28,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
         AboutComponent,
         ServicesComponent,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatCarouselModule
     ],
     entryComponents: []
 

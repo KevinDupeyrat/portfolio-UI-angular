@@ -37,8 +37,10 @@
         </p>
 
         <div>
-            <button mat-dialog-close type="submit" mat-raised-button color="accent" [disabled]="!formGroup.valid"
+            <button *ngIf="!sending" mat-dialog-close type="submit" mat-raised-button color="accent" [disabled]="!formGroup.valid"
                 (click)="submitMessage()">Envoyer</button>
+            <mat-progress-spinner *ngIf="sending" diameter="40" color="accent" mode="indeterminate">
+            </mat-progress-spinner>
         </div>
     </div>
 </div>

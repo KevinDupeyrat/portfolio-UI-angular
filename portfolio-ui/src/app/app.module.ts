@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -21,7 +21,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     SharedModule,
     CoreModule,
     MatSidenavModule,
@@ -29,7 +28,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     NgbModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

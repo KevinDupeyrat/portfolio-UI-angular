@@ -8,13 +8,30 @@ button {
     height: 4rem;
 }
 
-.about {
-    margin-top: 18rem;
-}
-
 .app-toolbar {
     position: fixed;
     width: 100%;
     top: 0; /* Sets the sticky toolbar to be on top */
     z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.parallax {
+    /* The image used */
+  background-image: url("../assets/images/apple-computer.jpg");
+
+  /* Set a specific height */
+  min-height: 20rem; 
+  line-height: 15rem;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #1789b5;
+  text-align: center;
+  text-justify: auto;
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: auto;
 }

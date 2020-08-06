@@ -16,6 +16,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 
 
@@ -32,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatGridListModule,
         MatFormFieldModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatProgressSpinnerModule
     ],
     declarations: [
         HeaderComponent,
@@ -52,7 +55,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatGridListModule,
         MatFormFieldModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatProgressSpinnerModule
     ],
     entryComponents: []
 

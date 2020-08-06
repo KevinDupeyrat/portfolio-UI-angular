@@ -8,8 +8,10 @@
     animation: pulse 3s;
     font-size: 2rem;
     color: white;
-    position: relative;
+    position: absolute;
+    text-align: center;
     margin-top: -20rem;
+    width: 100%;
 }
 
 @keyframes pulse {

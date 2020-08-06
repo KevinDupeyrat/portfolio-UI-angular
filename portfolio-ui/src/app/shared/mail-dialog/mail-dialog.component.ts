@@ -15,8 +15,10 @@ export class MailDialogComponent implements OnInit {
 
   formGroup: FormGroup;
   matcher = new MyErrorStateMatcher();
+  sending = false;
 
-  constructor(private emailService: EmailService,
+  constructor(
+    private emailService: EmailService,
     private dialogRef: MatDialogRef<MailDialogComponent>,
     private snackBar: MatSnackBar) { }
 
@@ -30,23 +32,21 @@ export class MailDialogComponent implements OnInit {
   }
 
   submitMessage(): void {
+    this.sending = true;
     this.emailService.postEmail(this.formGroup.value).subscribe(callback => {
-      this.snackBar.open('Email envoyé avec succès', 'Email', {
-        duration: 2000
-      });
+      this.onSendingEnd('Email envoyé avec succès');
+      this.dialogRef.close();
     },
-      (error) => {
-        if (error.status === 200) {
-          this.snackBar.open('Email envoyé avec succès', 'Email', {
-            duration: 2000
-          });
-        } else {
-          this.snackBar.open('Sending email fail !', 'Email', {
-            duration: 2000
-          });
-        }
+      () => {
+        this.onSendingEnd('Sending email fail !');
       });
-    this.dialogRef.close();
+  }
+
+  private onSendingEnd(message: string): void {
+    this.snackBar.open(message, 'Email', {
+      duration: 2000
+    });
+    this.sending = false;
   }
 
 }
