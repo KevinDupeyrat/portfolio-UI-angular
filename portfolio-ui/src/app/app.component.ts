@@ -75,7 +75,7 @@ export class AppComponent implements OnInit, OnDestroy {
   openDialog(): void {
     const dialogRef = this.dialog.open(MailDialogComponent, {
       width: '60rem',
-      height: '30rem',
+      height: '35rem',
       backdropClass: 'backdropBackground'
     });
 
