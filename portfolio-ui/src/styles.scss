@@ -53,7 +53,7 @@ $md-primary-theme: (
     500 : #4d4d4d,
     600 : #464646,
     700 : #3d3d3d,
-    800 : #343434,
+    800 : #030303,
     900 : #252525,
     A100 : #f18282,
     A200 : #ec5454,
@@ -132,6 +132,7 @@ $theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 .mat-step-header .mat-step-icon-selected {
     background-color: #3ca2c5 !important;
 }
+
 
 button:focus{
   border: none !important;

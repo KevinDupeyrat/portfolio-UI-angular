@@ -18,7 +18,7 @@ button {
 
 .parallax {
     /* The image used */
-  background-image: url("../assets/images/apple-computer.jpg");
+  background-image: url("../assets/images/paysage.jpg");
 
   /* Set a specific height */
   min-height: 20rem; 
@@ -29,10 +29,15 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #1789b5;
+  color: white;
   text-align: center;
   text-justify: auto;
   font-size: 1.8rem;
   font-style: italic;
   margin: auto;
+  border-top: #3ca2c5 solid 2rem;
+}
+
+.name-quote {
+    margin-top: -12rem
 }

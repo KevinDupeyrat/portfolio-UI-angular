@@ -1,4 +1,33 @@
 .card-service {
-    background-color: #4F4F4F;
+    background-color: #6F6E6E !important;
     padding: 10rem;
+}
+
+.img-logo {
+    width: 4rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+mat-card {
+    background-color: #6F6E6E;
+    border: none !important;
+    padding: 2rem;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+mat-card-title {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+}
+
+.techno {
+    margin-top: 1rem;
+}
+
+span {
+    color: #3ca2c5;
+    text-decoration: underline;
+    padding-right: 0.5rem;
 }
