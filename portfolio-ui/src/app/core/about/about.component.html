@@ -1,7 +1,12 @@
 <mat-card class="card-about">
+
     <div class="row">
 
         <div id="fade-in-about-1" class="col-sm col-md col-lg text">
+
+            <div class="header-div">
+                <img class="header" src="../../../assets/images/angular-docker-spring-boot-hug.png">
+            </div>
 
             Je suis Développeur d'application en Freelance depuis 2020,
             je participe a la conception et a la réalisation d'outil web pour
@@ -10,7 +15,8 @@
             Je peux intégrer une équipe (ou travailler seul) sur des projets
             from scratch ou des projets en cours de développement.
             <br />
-            J'ai l'habitude et les compétences pour travailler en Agile SCRUM comprenant ces cérémonie, sa philosophie et
+            J'ai l'habitude et les compétences pour travailler en Agile SCRUM comprenant ces cérémonie, sa philosophie
+            et
             ses outils.
             <br />
             Intégration possible du produit dans des écosystème déjà existant avec des types de communication
@@ -28,7 +34,7 @@
                 plus sur ce site</button>-->
         </div>
 
-        <div id="fade-in-about-2" class="col-sm col-md col-lg text">
+        <div id="fade-in-about-2" class="col-sm col-md col-lg skill text">
             <div class="row" *ngFor="let skill of skills">
                 {{skill.name}} - {{skill.value}}%
                 <mat-progress-bar mode="determinate" color="accent" [value]="skill.value">

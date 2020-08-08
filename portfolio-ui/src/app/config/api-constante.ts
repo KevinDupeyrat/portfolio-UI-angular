@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 export const API_CONSTANTE = {
-    SERVER_HOST: 'https://localhost:8443/api/v1'
+    SERVER_HOST: environment.SERVER_HOST
 };

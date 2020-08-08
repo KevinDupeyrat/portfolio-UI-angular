@@ -46,8 +46,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.homeOffset = this.homeElement.nativeElement.offsetTop;
     this.aproposOffset = this.homeOffset + 400;
-    this.serviceOffset = this.aproposOffset + 600;
-    this.experienceOffset = this.serviceOffset + 600;
+    this.serviceOffset = this.aproposOffset + 1200;
+    this.experienceOffset = this.serviceOffset + 1100;
 
     this.subscription.push(this.menuActiveService.getScrollIntoView().subscribe(value => {
       if (value === 0) {
