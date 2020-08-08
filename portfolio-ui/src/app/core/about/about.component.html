@@ -1,7 +1,7 @@
 <mat-card class="card-about">
-    <div class="row text">
+    <div class="row">
 
-        <div class="col-sm col-md col-lg">
+        <div id="fade-in-about-1" class="col-sm col-md col-lg text">
 
             Je suis Développeur d'application en Freelance depuis 2020,
             je participe a la conception et a la réalisation d'outil web pour
@@ -28,7 +28,7 @@
                 plus sur ce site</button>-->
         </div>
 
-        <div class="col-sm col-md col-lg">
+        <div id="fade-in-about-2" class="col-sm col-md col-lg text">
             <div class="row" *ngFor="let skill of skills">
                 {{skill.name}} - {{skill.value}}%
                 <mat-progress-bar mode="determinate" color="accent" [value]="skill.value">

@@ -22,5 +22,18 @@ button {
 }
 
 .text {
-    
+    opacity: 0;
+}
+
+.fade-in-1 {
+    animation: fadein 4s;
+}
+
+.fade-in-2 {
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
