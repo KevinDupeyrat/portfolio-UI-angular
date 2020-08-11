@@ -43,6 +43,10 @@
             </p>
 
             <div>
+                <re-captcha (resolved)="resolved($event)" [siteKey]="publicKey" ></re-captcha>
+            </div>
+
+            <div>
                 <button *ngIf="!sending" mat-dialog-close type="submit" mat-raised-button color="accent"
                     [disabled]="!formGroup.valid" (click)="submitMessage()">Envoyer</button>
                 <mat-progress-spinner *ngIf="sending" diameter="40" color="accent" mode="indeterminate">

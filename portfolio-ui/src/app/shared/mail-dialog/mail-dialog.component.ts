@@ -1,5 +1,7 @@
+import { UnsubscribeService } from './../../service/unsubscribe.service';
+import { CaptchaService } from './../../service/rest/captcha.service';
 import { EmailService } from './../../service/rest/email.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,16 +13,20 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './mail-dialog.component.html',
   styleUrls: ['./mail-dialog.component.scss']
 })
-export class MailDialogComponent implements OnInit {
+export class MailDialogComponent implements OnInit, OnDestroy {
 
   formGroup: FormGroup;
   matcher = new MyErrorStateMatcher();
   sending = false;
+  token: string;
+  publicKey = '6LdSob0ZAAAAAMQcKFEm5Uqs7NF6E_r0uTo0vTvY';
+  subscribe = [];
 
   constructor(
     private emailService: EmailService,
     private dialogRef: MatDialogRef<MailDialogComponent>,
-    private snackBar: MatSnackBar) { }
+    private snackBar: MatSnackBar,
+    private captchaService: CaptchaService) { }
 
   ngOnInit(): void {
 
@@ -33,13 +39,21 @@ export class MailDialogComponent implements OnInit {
 
   submitMessage(): void {
     this.sending = true;
-    this.emailService.postEmail(this.formGroup.value).subscribe(callback => {
-      this.onSendingEnd('Email envoyé avec succès');
-      this.dialogRef.close();
+
+    this.subscribe.push(this.captchaService.post(this.token).subscribe(() => {
+      this.subscribe.push(this.emailService.postEmail(this.formGroup.value).subscribe(() => {
+        this.onSendingEnd('Email envoyé avec succès');
+        this.dialogRef.close();
+      },
+        () => {
+          this.onSendingEnd('Sending email fail !');
+        }));
     },
       () => {
-        this.onSendingEnd('Sending email fail !');
-      });
+        this.onSendingEnd('Invalide Captcha !');
+      }
+    ));
+
   }
 
   private onSendingEnd(message: string): void {
@@ -47,6 +61,14 @@ export class MailDialogComponent implements OnInit {
       duration: 2000
     });
     this.sending = false;
+  }
+
+  private resolved(captchaResponse: string): void {
+    this.token = captchaResponse;
+  }
+
+  ngOnDestroy(): void {
+    UnsubscribeService.unsubscribe(this.subscribe);
   }
 
 }
