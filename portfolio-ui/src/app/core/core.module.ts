@@ -8,6 +8,7 @@ import { ServicesComponent } from './services/services.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ExperienceComponent } from './experience/experience.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -17,7 +18,8 @@ import { ExperienceComponent } from './experience/experience.component';
         MatCardModule,
         MatCarouselModule,
         MatProgressBarModule,
-        MatGridListModule
+        MatGridListModule,
+        MatExpansionModule
     ],
     declarations: [
         HomeComponent,
@@ -32,7 +34,8 @@ import { ExperienceComponent } from './experience/experience.component';
         MatCardModule,
         MatGridListModule,
         MatCarouselModule,
-        ExperienceComponent
+        ExperienceComponent,
+        MatExpansionModule
     ],
     entryComponents: []
 

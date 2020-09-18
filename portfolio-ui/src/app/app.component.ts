@@ -72,8 +72,7 @@ export class AppComponent implements OnInit, OnDestroy {
       document.getElementById('fade-in-service-1').classList.replace('text', 'fade-in-1');
       document.getElementById('fade-in-service-2').classList.replace('text', 'fade-in-2');
     } else if (yOffset >= this.experienceOffset) {
-      document.getElementById('fade-in-experience-1').classList.replace('text', 'fade-in-1');
-      document.getElementById('fade-in-experience-2').classList.replace('text', 'fade-in-2');
+      document.getElementById('card-element-exp').classList.replace('text', 'fade-in');
       this.menuActiveService.setShowMenuActiveEventStatus(4);
     }
   }

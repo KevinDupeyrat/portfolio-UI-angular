@@ -1,3 +1,5 @@
+import { AddExperienceComponent } from './../../shared/add-experience/add-experience.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  panelOpenState = false;
+
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+
+  addExp(): void {
+    console.log('coucou');
+    const dialogRef = this.dialog.open(AddExperienceComponent, {
+      width: '40rem',
+      height: '30rem',
+      backdropClass: 'backdropBackground'
+    });
   }
 
 }

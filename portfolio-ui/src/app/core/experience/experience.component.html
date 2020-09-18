@@ -1,85 +1,211 @@
 <mat-card class="card-experience">
-    <div class="row">
-        <div id="fade-in-experience-1" class="col-sm col-md col-lg text">
 
-            <mat-card class="experience">
-                <mat-card-header>
-                    <mat-card-title>
-                        <div class="compagnie">
-                            Acensi
-                        </div>
-                    </mat-card-title>
-                    <mat-card-subtitle>
-                        Sous-traitance à la Société Général
-                    </mat-card-subtitle>
-                </mat-card-header>
+    <div id="card-element-exp" class="text">
 
-                <mat-card-content>
+        <div class="row">
+            <div class="col-sm col-md col-lg">
 
-                    <div class="row">
-                        <div class="col-sm col-md col-lg date">
-                            2018 - 2020
+                <mat-card class="experience">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <div class="compagnie">
+                                Finacoop
+                            </div>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            En interne
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col-sm col-md col-lg date">
+                                2018 - 2018
+                            </div>
+                            <div class="col-sm col-md col-lg"></div>
                         </div>
-                        <div class="col-sm col-md col-lg"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            Projects :
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Projects :
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                LEKO
+                            </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            Recherche de Flux
+                        <div class="row description">
+                            <mat-accordion>
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            Déscription
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <p>Projet d'application Descktop de gestion de transfère de lettres de
+                                        coopération comptable</p>
+                                        <span> EN SAVOIRE PLUS</span>
+                                </mat-expansion-panel>
+                            </mat-accordion>
                         </div>
-                    </div>
-                    <div class="row description">
-                        Projet de gestion des recherches de Flux Bancaire
-                    </div>
-                    <div class="row description">
-                        <span> EN SAVOIRE PLUS</span>
-                    </div>
-                </mat-card-content>
-            </mat-card>
+
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+
+
+            <div class="col-sm col-md col-lg">
+
+                <mat-card class="experience">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <div class="compagnie">
+                                Acensi
+                            </div>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            En interne
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col-sm col-md col-lg date">
+                                2018 - 2018
+                            </div>
+                            <div class="col-sm col-md col-lg"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Projects :
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Intranet Intracens
+                            </div>
+                        </div>
+                        <div class="row description">
+                            <mat-accordion>
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            Déscription
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <p>Migration IHM de GWT vers Angular 5</p>
+                                    <span> EN SAVOIRE PLUS</span>
+                                </mat-expansion-panel>
+                            </mat-accordion>                      
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
         </div>
+        <div class="row">
 
-        <div id="fade-in-experience-2" class="col-sm col-md col-lg text">
 
-            <mat-card class="experience">
-                <mat-card-header>
-                    <mat-card-title>
-                        <div class="compagnie">
-                            Acensi
+            <div class="col-sm col-md col-lg">
+
+                <mat-card class="experience">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <div class="compagnie">
+                                Acensi
+                            </div>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            Sous-traitance à la Société Général
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col-sm col-md col-lg date">
+                                2018 - 2020
+                            </div>
+                            <div class="col-sm col-md col-lg"></div>
                         </div>
-                    </mat-card-title>
-                    <mat-card-subtitle>
-                        Sous-traitance à la Société Général
-                    </mat-card-subtitle>
-                </mat-card-header>
-
-                <mat-card-content>
-
-                    <div class="row">
-                        <div class="col-sm col-md col-lg date">
-                            2020 - Aujourd'hui
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Projects :
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Recherche de Flux
+                            </div>
                         </div>
-                        <div class="col-sm col-md col-lg"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            Projects :
+                        <div class="row description">                     
+                            <mat-accordion>
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            Déscription
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <p>Projet de gestion des recherches de Flux Bancaire</p>
+                                    <span> EN SAVOIRE PLUS</span>
+                                </mat-expansion-panel>
+                            </mat-accordion>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            Recherche et Réquisition
+                       
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="col-sm col-md col-lg">
+
+                <mat-card class="experience">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <div class="compagnie">
+                                Acensi
+                            </div>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            Sous-traitance à la Société Général
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col-sm col-md col-lg date">
+                                2020 - Aujourd'hui
+                            </div>
+                            <div class="col-sm col-md col-lg"></div>
                         </div>
-                    </div>
-                    <div class="row description">
-                        Projet de gestion des recherches de Flux Bancaire et de réquisition judiciaire
-                    </div>
-                    <div class="row description">
-                        <span> EN SAVOIRE PLUS</span>
-                    </div>
-                </mat-card-content>
-            </mat-card>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Projects :
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                Recherche et Réquisition
+                            </div>
+                        </div>
+                        <div class="row description">
+                            <mat-accordion>
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            Déscription
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <p>Projet de gestion des recherches de Flux Bancaire et de réquisition judiciaire</p>
+                                    <span> EN SAVOIRE PLUS</span>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </div>                  
+                    </mat-card-content>
+                </mat-card>
 
 
+            </div>
         </div>
     </div>
+
+    <button type="button" class="btn btn-primary" (click)="addExp()">
+        Add
+    </button>
+
 </mat-card>

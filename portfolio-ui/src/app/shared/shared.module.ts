@@ -18,7 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RecaptchaModule } from 'ng-recaptcha';
-
+import { AddExperienceComponent } from './add-experience/add-experience.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -37,14 +38,16 @@ import { RecaptchaModule } from 'ng-recaptcha';
         MatInputModule,
         ReactiveFormsModule,
         MatProgressSpinnerModule,
-        RecaptchaModule
+        RecaptchaModule,
+        MatCheckboxModule
     ],
     declarations: [
         HeaderComponent,
         MenuComponent,
         MailDialogComponent,
         WebDetailPopupComponent,
-        FooterComponent
+        FooterComponent,
+        AddExperienceComponent
     ],
     exports: [
         HeaderComponent,
@@ -58,7 +61,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
         MatFormFieldModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatCheckboxModule
     ],
     entryComponents: []
 

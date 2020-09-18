@@ -1,6 +1,6 @@
 .card-experience {
     background-color: #2D2D2D;
-    padding: 10rem;
+    padding: 6rem;
 }
 
 .compagnie {
@@ -15,11 +15,6 @@
     margin: auto;
 }
 
-span:hover {
-    cursor: pointer;
-    text-decoration: none;
-}
-
 span {
     color : #3ca2c5;
     text-decoration: underline;
@@ -29,12 +24,12 @@ span {
     opacity: 0;
 }
 
-.fade-in-1 {
+.fade-in {
     animation: fadein 2s;
 }
 
-.fade-in-2 {
-    animation: fadein 2s;
+.row {
+    margin-bottom: 1rem !important;
 }
 
 @keyframes fadein {
